@@ -1,16 +1,242 @@
 /* FUENTES */
-@import url('httñps://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /*raíz*/
-*,::after,::before{
+*,
+::after,
+::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /*Variables globales*/
-:root{
-    --color-violet: #707bff;
-    --color-gray: #e3e1eb;
+:root {
+    /*color*/
+    --color-violet: #4b56d8;
+    --color-gray: #ced1dc;
+    /*background*/
+    --background-card: #fff;
+    /*font*/
+    --font-family--title: "M PLUS Rounded 1c";
+    --font-family--text: "Open Sans";
+    /*font-size*/
+    --font-size-text: 0.9rem;
+    --font-size-title: 1.2rem;
+}
+
+body {
+    background: var(--color-gray);
+    width: 100vw;
+    height: 100svh; /*!Medida que debe tomarse a partir de ahora para evitar problemas con el alto en diseños de moviles.*/
+    display: block;
+    align-content: center;
+    /*Nueva forma de alinear elementos en el eje vertical*/
+    border: 1px solid green;
+}
+
+section {
+    width: 80%;
+    height: 75%;
+    margin-inline: auto;
+    /*centramos en horizontal*/
+}
+
+.form__label,
+.form__input {
+    display: block;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-inline: 4%;
+}
+
+/*----btn/button----*/
+
+.btn {
+    font: bold var(--font-size-text) var(--font-family--title);
+    text-transform: capitalize;
+    padding: 5px 10px;
+    border-radius: .3rem;
+    background-color: inherit;
+    border: 1px solid var(--color-gray);
+    cursor: pointer;
+}
+
+/*----card----*/
+
+.card {
+    border: 2px solid blue;
+    width: 40%;
+    background-color: var(--background-card);
+    border-radius: 1ch;
+    padding: 15px 20px;
+}
+
+.card__x {
+    display: block;
+    text-align: end;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 1.2rem;
+
+    i {
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+.card__icon {
+    background: var(--color-gray);
+    color: var(--color-violet);
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+
+    i {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.card__title {
+    font-family: var(--font-family--title);
+    font-size: var(--font-size-title);
+    margin-bottom: 5px;
+}
+
+
+.card__text {
+    font: var(--font-size-text) var(--font-family--text);
+    margin-bottom: 20px;
+
+    b {
+        color: var(--color-violet);
+    }
+}
+
+/*form*/
+
+.form__content {
+    margin-bottom: 2%;
+}
+
+.form__label {
+    font: bold var(--font-size-text) var(--font-family--title);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.form__input {
+    width: 100%;
+    padding: 5px 10px;
+    font-family: var(--font-family--text);
+    font-size: var(--font-size-text);
+    border: 1px solid var(--color-gray);
+}
+
+.form__content--md {
+    display: flex;
+    justify-content: space-between;
+
+    .form__input::placeholder {
+        text-transform: uppercase;
+    }
+}
+
+.content__md {
+    width: 48%;
+}
+
+.tooltip {
+    color: var(--color-violet);
+    font-family: var(--font-family--text);
+    font-size: var(--font-size-text);
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.form__code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .form__input {
+        width: 60%;
+    }
+}
+
+.form__content--button {
+    margin: 20px 0;
+    display: flex;
+    justify-content: end;
+}
+
+
+.btn--cancel {
+    margin-right: 10px;
+}
+
+.btn--form {
+    background-color: var(--color-violet);
+    color: #fff;
+}
+
+
+@media (width >=1400px) {
+
+    :root {
+        /*font-size*/
+        --font-size-text: 1.1rem;
+        --font-size-title: 1.4rem;
+    }
+
+    .card {
+        /* border:1px solid red;
+        height: 600px;
+        padding: 40px; */
+        width: 44%;
+    }
+
+
+    .card__title {
+        margin-bottom: 10px;
+    }
+
+    .card__text {
+        margin-bottom: 40px;
+    }
+
+    .form__content {
+        margin-bottom: 4%;
+    }
+}
+
+@media (width <=820px) {
+
+    :root {
+        /*font-size*/
+        --font-size-text: 0.7rem;
+        --font-size-title: 0.9rem;
+    }
+
+    body{
+        display: grid; 
+        align-content: center;
+    }
+    /*NOTE: En Movil, la propiedad sola 'align-content' tal vez funcione mal, para solucionarlo le puse display grid.*/
+
+    .container {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
 }
