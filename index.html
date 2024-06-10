@@ -57,14 +57,17 @@
                 <form action="#" class="form card__form">
                     <div class="form__content">
                         <label for="owner" class="form__label form__owner">card owner</label>
-                        <input type="text" class="form__input" id="owner" placeholder="Name">
+                        <input type="text" class="form__input" id="owner" placeholder="Name"  value="Bob Ross">
                     </div>
-                    <div class="form__content form__content--number">
-                        <label for="number" class="form__label">card number</label>
-                        <input type="text" class="form__input form__number" id="number" placeholder="Card #">
-                        <span class="form__icon">
-                            <i class="fa-brands fa-cc-mastercard"></i>
-                        </span>
+                    <div class="form__content">
+                        <label for="number" class="form__label form__label--number">card number</label>
+                        <div class="form__content--number">
+                            <input type="text" value="5332-25" class="form__input form__input--number" id="number"
+                                placeholder="Card #">
+                            <span class="form__icon">
+                                <i class="fa-brands fa-cc-mastercard"></i>
+                            </span>
+                        </div>
                     </div>
                     <div class="form__content form__content--md">
                         <div class="content__md"><label for="date" class="form__label form__owner">expiry date</label>
