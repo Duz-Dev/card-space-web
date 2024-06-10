@@ -1,6 +1,5 @@
 /* FUENTES */
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /*raíz*/
 *,
@@ -11,34 +10,68 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 63%;
+    /* Se estipula que un 1rem = 10px*/
+}
+
+
 /*Variables globales*/
 :root {
     /*color*/
-    --color-violet: #4b56d8;
-    --color-gray: #e3e1eb;
-    /*background*/
+    --color-white: #fff;
+    --color-black: #3a3c4a;
+    --color-text: #585966;
+    --color-p: #8f8f8f;
+    --color-container: #d0d1de;
+    --color-bg-icon-comment: #e9e5ff;
+    --color-blue: #2e44ff;
+    --color-blue-light: #6d7cff;
+    --color-gray-light: #c7c8d5;
+    --color-bg-check: #b2eeda;
+    --color-border-submit: #5768fc;
+    --color-border-check: 1px solid #90ddc5;
+    --color-border-span: 1px solid #b8b6b6;
+    --color-circle-check: #00c887;
+    --border-r: .6rem;
+    --border: 1px solid #e8e8e8;
+    --shadow: 0 0 .1rem var(--color-gray-light);
+    --font: "Roboto", sans-serif;
+    /* background
     --background-card: #fff;
     /*font*/
-    --font-family--title: "M PLUS Rounded 1c";
-    --font-family--text: "Open Sans";
+    /* --font-family--title: "M PLUS Rounded 1c";
+    --font-family--text: "Open Sans"; */
     /*font-size*/
-    --font-size-text: 0.9rem;
-    --font-size-title: 1.2rem;
+    /* --font-size-text: 0.9rem;
+    --font-size-title: 1.2rem;  */
 }
 
-body {
+/*body {
     background: var(--color-gray);
     width: 100vw;
-    height: 100svh; /*!Medida que debe tomarse a partir de ahora para evitar problemas con el alto en diseños de moviles.*/
+    height: 100svh; !Medida que debe tomarse a partir de ahora para evitar problemas con el alto en diseños de moviles.
     display: block;
     align-content: center;
-    /*Nueva forma de alinear elementos en el eje vertical*/
+    Nueva forma de alinear elementos en el eje vertical
     border: 1px solid green;
+}*/
+
+body {
+    height: 100vh;
+    font-family: var(--font);
+    font-size: 1.6rem;
+    color: var(--color-text);
+    font-weight: 500;
+    /* line-height: 1.6; */
+    background-color: var(--color-container);
+    align-content: center; /*Podría centrar los elementos con align-content*/
 }
 
+
+
 section {
-    width: 80%;
-    height: 75%;
+    width: 70%;
     margin-inline: auto;
     /*centramos en horizontal*/
 }
@@ -50,47 +83,70 @@ section {
 
 .container {
     display: flex;
-    justify-content: space-evenly;
-    padding-inline: 4%;
+        justify-content: space-between;
 }
 
 /*----btn/button----*/
 
 .btn {
-    font: bold var(--font-size-text) var(--font-family--title);
+    height: 40px;
+    font-weight: bold;
     text-transform: capitalize;
-    padding: 5px 10px;
-    border-radius: .3rem;
+    padding: 10px 20px;
+    border-radius: var(--border-r);
     background-color: inherit;
-    border: 1px solid var(--color-gray);
+    border:1px solid var(--color-gray-light);
     cursor: pointer;
+    font-size: 1.4rem;
 }
 
 /*----card----*/
 
 .card {
-    width: 39%;
-    background-color: var(--background-card);
-    border-radius: 1ch;
-    padding: 40px;
+    width: 47%;
+    /* min-height: 500px; */
+    background-color: var(--color-white);
+    border-radius: var(--border-r);
+    padding: 25px;
+    box-shadow: 0 0 10px .5rem var(--color-gray-light);
 }
 
-.card__x {
-    display: block;
-    text-align: end;
-    color: rgba(0, 0, 0, 0.4);
-    font-size: 1.2rem;
+.card__icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 25px;
+
+}
+
+
+.card__icon--coin {
+    --size:53px;
+    color: var(--color-blue);
+    background-color:var(--color-bg-icon-comment);
+    width: var(--size);
+    height: var(--size);
+    align-content: center;
+    text-align: center;
+    font-size: 2.7rem;
+    border-radius: 50%;
 
     i {
-        text-align: center;
-        cursor: pointer;
+        display: block;
+        margin-top: 2px;
     }
 }
 
-.card__icon {
-    background: var(--color-gray);
-    color: var(--color-violet);
-    padding: 12px;
+.card__icon--x {
+    color: var(--color-gray-light);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* .card__icon {
+    background: var(--color-container);
+    color: var(--color-blue);
+    padding: 22px;
     border-radius: 50%;
     font-size: 1.5rem;
 
@@ -98,51 +154,63 @@ section {
         margin-bottom: 30px;
         text-align: center;
     }
-}
+} */
 
 .card__title {
-    font-family: var(--font-family--title);
-    font-size: var(--font-size-title);
-    margin-bottom: 5px;
+    margin-bottom: .5rem;
+    font-size: 1.75rem;
 }
 
 
 .card__text {
-    font: var(--font-size-text) var(--font-family--text);
-    margin-bottom: 20px;
+    color: var(--color-p);
+    font-size: .9em;
+    margin-bottom: 30px;
 
     b {
-        color: var(--color-violet);
+        color: var(--color-blue-light);
     }
 }
 
 /*form*/
 
 .form__content {
-    margin-bottom: 2%;
+    margin-bottom: 15px;
 }
 
 .form__label {
-    font: bold var(--font-size-text) var(--font-family--title);
     text-transform: uppercase;
-    margin-bottom: 5px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .form__input {
     width: 100%;
-    padding: 5px 10px;
-    font-family: var(--font-family--text);
-    font-size: var(--font-size-text);
-    border: 1px solid #ced1dc45;
-    box-shadow: 1px 1px 10px var(--color-gray);
-    &:focus{
+    padding: 10px;
+    border:var(--border);
+    border-radius: var(--border-r);
+
+
+    &:focus {
         font-weight: bold;
+        outline:1px solid var(--color-blue);
+        caret-color: var(--color-blue);
+    }
+
+
+    &::placeholder{
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: var(--color-gray-light);
     }
 }
+
 
 .form__content--md {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 
     .form__input::placeholder {
         text-transform: uppercase;
@@ -154,10 +222,10 @@ section {
 }
 
 .tooltip {
-    color: var(--color-violet);
-    font-family: var(--font-family--text);
-    font-size: var(--font-size-text);
+    color: var(--color-blue-light);
     width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
     text-align: center;
     cursor: pointer;
 }
@@ -166,16 +234,18 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border:var(--border);
 
     .form__input {
         width: 60%;
+        border:none;
     }
 }
 
 .form__content--button {
-    margin: 50px 0 0 0;
     display: flex;
     justify-content: end;
+    margin-bottom: 0;
 }
 
 
@@ -184,62 +254,31 @@ section {
 }
 
 .btn--form {
-    background-color: var(--color-violet);
-    color: #fff;
+    background-color: var(--color-blue-light);
+    color:#ebedff;
+    border: none;
 }
 
+.form__content--number{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
 
-@media (width >=1400px) {
-
-    :root {
-        /*font-size*/
-        --font-size-text: 1.1rem;
-        --font-size-title: 1.4rem;
-    }
-
-    .card {
-        /* border:1px solid red;
-        height: 600px;
-        padding: 40px; */
-        width: 44%;
-    }
-
-
-    .card__title {
-        margin-bottom: 10px;
-    }
-
-    .card__text {
-        margin-bottom: 40px;
-    }
-
-    .form__content {
-        margin-bottom: 4%;
+    i {
+        position:absolute;
+        right: 20px;
+        line-height: 40px;
     }
 }
 
-@media (width <=820px) {
+.form__number {
+    width: 100%;
+}
 
-    :root {
-        /*font-size*/
-        --font-size-text: 0.7rem;
-        --font-size-title: 0.9rem;
-    }
+.form__icon{
+    opacity: 0;
+}
 
-    body{
-        display: grid; 
-        align-content: center;
-    }
-    /*NOTE: En Movil, la propiedad sola 'align-content' tal vez funcione mal, para solucionarlo le puse display grid.*/
-
-    .container {
-        display: flex;
-        flex-flow: column wrap;
-    }
-
-    .card {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
+.form__number:focus + .form__icon {
+    opacity: 1;
 }
