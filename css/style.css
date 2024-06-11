@@ -37,25 +37,7 @@ html {
     --border: 1px solid #e8e8e8;
     --shadow: 0 0 .1rem var(--color-gray-light);
     --font: "Roboto", sans-serif;
-    /* background
-    --background-card: #fff;
-    /*font*/
-    /* --font-family--title: "M PLUS Rounded 1c";
-    --font-family--text: "Open Sans"; */
-    /*font-size*/
-    /* --font-size-text: 0.9rem;
-    --font-size-title: 1.2rem;  */
 }
-
-/*body {
-    background: var(--color-gray);
-    width: 100vw;
-    height: 100svh; !Medida que debe tomarse a partir de ahora para evitar problemas con el alto en diseños de moviles.
-    display: block;
-    align-content: center;
-    Nueva forma de alinear elementos en el eje vertical
-    border: 1px solid green;
-}*/
 
 body {
     height: 100vh;
@@ -68,8 +50,6 @@ body {
     align-content: center;
     /*Podría centrar los elementos con align-content*/
 }
-
-
 
 section {
     width: 70%;
@@ -90,10 +70,9 @@ section {
 /*----btn/button----*/
 
 .btn {
-    height: 40px;
     font-weight: bold;
     text-transform: capitalize;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: var(--border-r);
     background-color: inherit;
     border: 1px solid var(--color-gray-light);
@@ -131,11 +110,11 @@ section {
     text-align: center;
     font-size: 2.7rem;
     border-radius: 50%;
+}
 
-    i {
-        display: block;
-        margin-top: 2px;
-    }
+.fa-coins {
+    display: block;
+    margin-top: 2px;
 }
 
 .card__icon--x {
@@ -143,19 +122,6 @@ section {
     font-size: 2rem;
     cursor: pointer;
 }
-
-/* .card__icon {
-    background: var(--color-container);
-    color: var(--color-blue);
-    padding: 22px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-
-    i {
-        margin-bottom: 30px;
-        text-align: center;
-    }
-} */
 
 .card__title {
     margin-bottom: .5rem;
@@ -167,10 +133,10 @@ section {
     color: var(--color-p);
     font-size: .9em;
     margin-bottom: 30px;
+}
 
-    b {
-        color: var(--color-blue-light);
-    }
+.card__text b {
+    color: var(--color-blue-light);
 }
 
 /*form*/
@@ -189,34 +155,35 @@ section {
 .form__input {
     width: 100%;
     padding: 12.5px;
-    border: var(--border);
+    border: none;
+    /* border: var(--border); */
+    box-shadow: 0 0 0 1px #e8e8e8;
     border-radius: var(--border-r);
     font-weight: bold;
+}
 
+.form__input:focus {
+    font-weight: bold;
+    outline: 1.6px solid var(--color-blue);
+    caret-color: var(--color-blue);
+}
 
-    &:focus {
-        font-weight: bold;
-        outline: 1.6px solid var(--color-blue);
-        caret-color: var(--color-blue);
-    }
-
-
-    &::placeholder {
-        font-size: 1.6rem;
-        font-weight: bold;
-        color: var(--color-gray-light);
-    }
+.form__input::placeholder {
+    font-size: 1.6rem;
+    font-weight: bold;
+    /* color: var(--color-gray-light); */
+    color: #8f8f8f;
 }
 
 
 .form__content--md {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    margin-bottom: 30px ;
+}
 
-    .form__input::placeholder {
-        text-transform: uppercase;
-    }
+.form__content--md::placeholder{
+    text-transform: uppercase;
 }
 
 .content__md {
@@ -237,11 +204,11 @@ section {
     align-items: center;
     justify-content: space-between;
     border: var(--border);
+}
 
-    .form__input {
-        width: 60%;
-        border: none;
-    }
+.form__input--code {
+    width: 60%;
+    border: none;
 }
 
 .form__content--button {
@@ -275,7 +242,7 @@ section {
 
 .form__input--number {
     width: 90%;
-    border: none;
+    box-shadow: none;
 }
 
 .form__input--number:focus{

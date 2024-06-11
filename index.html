@@ -2,93 +2,94 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cards</title>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
-    <section>
-        <div class="container">
-            <div class="card">
-                <div class="card__icon">
-                    <span class="card__icon--coin"><i class="fa-solid fa-coins"></i></span>
-                    <span class="card__icon--x"><i class="fa-solid fa-x"></i></span>
-                </div>
-                <h4 class="card__title">We need your billing info.</h4>
-                <p class="card__text">We'll bill you <b>$19.99/month</b>. charged monthly</p>
-                <form action="#" class="form card__form">
-                    <div class="form__content">
-                        <label for="owner" class="form__label form__owner">card owner</label>
-                        <input type="text" class="form__input" id="owner" placeholder="Name">
-                    </div>
-                    <div class="form__content">
-                        <label for="number" class="form__label form__number">card number</label>
-                        <input type="text" class="form__input" id="number" placeholder="Card #">
-                    </div>
-                    <div class="form__content form__content--md">
-                        <div class="content__md"><label for="date" class="form__label form__owner">expiry date</label>
-                            <input type="text" class="form__input" id="date" placeholder="mm / yy">
-                        </div>
-                        <div class="content__md">
-                            <label for="date" class="form__label form__owner">cvc code</label>
-                            <div class="form__code">
-                                <input type="text" class="form__input" id="date" placeholder="cvc">
-                                <span class="tooltip">What is this?</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form__content form__content--button">
-                        <button type="button" class="btn btn--cancel">cancel</button>
-                        <button type="submit" class="btn btn--form">Process Payment</button>
-                    </div>
-                </form>
-            </div>
-            <div class="card">
-                <div class="card__icon">
-                    <span class="card__icon--coin"><i class="fa-solid fa-coins"></i></span>
-                    <span class="card__icon--x"><i class="fa-solid fa-x"></i></span>
-                </div>
-                <h4 class="card__title">We need your billing info.</h4>
-                <p class="card__text">We'll bill you <b>$19.99/month</b>. charged monthly</p>
-                <form action="#" class="form card__form">
-                    <div class="form__content">
-                        <label for="owner" class="form__label form__owner">card owner</label>
-                        <input type="text" class="form__input" id="owner" placeholder="Name"  value="Bob Ross">
-                    </div>
-                    <div class="form__content">
-                        <label for="number" class="form__label form__label--number">card number</label>
-                        <div class="form__content--number">
-                            <input type="text" value="5332-25" class="form__input form__input--number" id="number"
-                                placeholder="Card #">
-                            <span class="form__icon">
-                                <i class="fa-brands fa-cc-mastercard"></i>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="form__content form__content--md">
-                        <div class="content__md"><label for="date" class="form__label form__owner">expiry date</label>
-                            <input type="text" class="form__input" id="date" placeholder="mm / yy">
-                        </div>
-                        <div class="content__md">
-                            <label for="date" class="form__label form__owner">cvc code</label>
-                            <div class="form__code">
-                                <input type="text" class="form__input" id="date" placeholder="cvc">
-                                <span class="tooltip">What is this?</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form__content form__content--button">
-                        <button type="button" class="btn btn--cancel">cancel</button>
-                        <button type="submit" class="btn btn--form">Process Payment</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
+	<section>
+		<div class="container">
+			<div class="card">
+				<div class="card__icon">
+					<span class="card__icon--coin"><i class="fa-solid fa-coins"></i></span>
+					<span class="card__icon--x"><i class="fa-solid fa-x"></i></span>
+				</div>
+				<h4 class="card__title">We need your billing info.</h4>
+				<p class="card__text">We'll bill you <b>$19.99/month</b>. charged monthly</p>
+				<form action="#" class="form card__form">
+					<div class="form__content">
+						<label for="owner" class="form__label form__owner">card owner</label>
+						<input type="text" class="form__input" id="owner" placeholder="Name">
+					</div>
+					<div class="form__content">
+						<label for="number" class="form__label form__number">card number</label>
+						<input type="text" class="form__input" id="number" placeholder="Card #">
+					</div>
+					<div class="form__content form__content--md">
+						<div class="content__md"><label for="date" class="form__label form__owner">expiry date</label>
+							<input type="text" class="form__input" id="date" placeholder="mm / yy">
+						</div>
+						<div class="content__md">
+							<label for="date" class="form__label form__owner">cvc code</label>
+							<div class="form__code">
+								<input type="text" class="form__input form__input--code" id="date" placeholder="cvc">
+								<span class="tooltip">What is this?</span>
+							</div>
+						</div>
+					</div>
+					<div class="form__content form__content--button">
+						<button type="button" class="btn btn--cancel">cancel</button>
+						<button type="submit" class="btn btn--form">Process Payment</button>
+					</div>
+				</form>
+			</div>
+			<div class="card">
+				<div class="card__icon">
+					<span class="card__icon--coin"><i class="fa-solid fa-coins"></i></span>
+					<span class="card__icon--x"><i class="fa-solid fa-x"></i></span>
+				</div>
+				<h4 class="card__title">We need your billing info.</h4>
+				<p class="card__text">We'll bill you <b>$19.99/month</b>. charged monthly</p>
+				<form action="#" class="form card__form">
+					<div class="form__content">
+						<label for="owner" class="form__label form__owner">card owner</label>
+						<input type="text" class="form__input" id="owner" placeholder="Name" value="Bob Ross">
+					</div>
+					<div class="form__content">
+						<label for="number" class="form__label form__label--number">card number</label>
+						<div class="form__content--number">
+							<input type="text" value="5332-25" class="form__input form__input--number" id="number"
+								placeholder="Card #">
+							<span class="form__icon">
+								<i class="fa-brands fa-cc-mastercard"></i>
+							</span>
+						</div>
+					</div>
+					<div class="form__content form__content--md">
+						<div class="content__md"><label for="date" class="form__label form__owner">expiry date</label>
+							<input type="text" class="form__input" id="date" placeholder="mm / yy">
+						</div>
+						<div class="content__md">
+							<label for="date" class="form__label form__owner">cvc code</label>
+							<div class="form__code">
+								<input type="text" class="form__input" id="date" placeholder="cvc">
+								<span class="tooltip">What is this?</span>
+							</div>
+						</div>
+					</div>
+					<div class="form__content form__content--button">
+						<button type="button" class="btn btn--cancel">cancel</button>
+						<button type="submit" class="btn btn--form">Process Payment</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
 </body>
 
 </html>
+
